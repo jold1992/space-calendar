@@ -1,40 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Space Calendar
 
-## Getting Started
+Una aplicación web que muestra los próximos lanzamientos espaciales y eventos astronómicos en un calendario interactivo.
 
-First, run the development server:
+## Características
+
+- **Calendario Interactivo**: Visualiza lanzamientos y eventos en un calendario
+- **Lanzamientos Espaciales**: Información actualizada de próximos lanzamientos desde TheSpaceDevs API
+- **Eventos Astronómicos**: Seguimiento de eventos como eclipses, lluvias de meteoros, etc.
+- **Favoritos**: Guarda tus lanzamientos y eventos favoritos localmente
+- **Multiidioma**: Soporte para inglés y español
+- **Diseño Espacial**: Interfaz con temática espacial con animaciones de estrellas
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- SWR para gestión de estado
+- TheSpaceDevs API
+
+## Despliegue en GitHub Pages
+
+Este proyecto está configurado para desplegarse automáticamente en GitHub Pages mediante GitHub Actions.
+
+### Configuración
+
+1. Habilitar GitHub Pages:
+   - Ve a **Settings > Pages** en tu repositorio
+   - En **Source**, selecciona **GitHub Actions**
+
+2. El workflow se ejecutará automáticamente al hacer push a la rama `main`
+
+### Despliegue Manual
+
+```bash
+npm run build
+```
+
+Esto generará la carpeta `out/` con los archivos estáticos para GitHub Pages.
+
+## Desarrollo Local
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# o
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Créditos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on GitHub Pages
-
-This project is configured to deploy automatically to GitHub Pages using GitHub Actions.
-
-1. Push changes to `main`.
-2. In your repository settings, set **Pages > Source** to **GitHub Actions**.
-3. Wait for the workflow `Deploy Next.js site to Pages` to complete.
-
-The workflow builds a static export (`out/`) and publishes it to GitHub Pages.
+- Datos proporcionados por [TheSpaceDevs](https://thespacedevs.com)
+- Desarrollado por [John Lomas](https://github.com/jold1992)
