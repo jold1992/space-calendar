@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
+const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "";
+const isProjectPage = repoName.length > 0 && !repoName.endsWith(".github.io");
+const basePath =
+  process.env.NODE_ENV === "production" && isProjectPage ? `/${repoName}` : "";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
